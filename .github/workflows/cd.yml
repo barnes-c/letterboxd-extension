@@ -1,3 +1,4 @@
+---
 name: Browser Extension CD
 
 on:
@@ -30,13 +31,13 @@ jobs:
           npm ci
           npm run build
           sudo apt update && sudo apt install -y zip
-          zip -rm letterboxd-enhancer.zip dist
+          zip -rm letterboxd-companion.zip dist
 
       - name: Upload release artifact
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./letterboxd-enhancer.zip
+          file: ./letterboxd-companion.zip
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
