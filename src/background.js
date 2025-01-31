@@ -1,3 +1,4 @@
+/* global chrome */
 chrome.runtime.onInstalled.addListener(() => {
-  console.log('Letterboxd Extension is running.');
-});
+  console.log('Letterboxd Extension is running.')
+})

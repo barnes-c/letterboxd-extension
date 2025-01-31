@@ -1,0 +1,14 @@
+{
+    "env": {
+        "browser": true,
+        "webextensions": true
+    },
+    "globals": {
+        "chrome": "readonly",
+        "MutationObserver": "readonly",
+        "alert": "readonly"
+    },
+    "rules": {
+        "no-useless-escape": "off"
+    }
+}
