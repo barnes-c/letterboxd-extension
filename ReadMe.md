@@ -1,6 +1,6 @@
 # Letterboxd Companion
 
-![Letterboxd Companion Logo](src/assets/Banner.png)
+![Letterboxd Companion Logo](https://github.com/barnes-c/letterboxd-extension/blob/master/src/assets/banner.png)
 
 ## Overview
 
