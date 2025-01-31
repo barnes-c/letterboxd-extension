@@ -3,36 +3,36 @@ name: Browser Extension CD
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
 
 jobs:
   build_release:
-    runs-on: ubuntu-20.04
-    name: create release
+    name: Create Release
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16
-
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: version
-        run: echo ::set-output name=version::${GITHUB_REF#refs/*/}
-        id: version
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
 
-      - name: Build artifact
+      - name: Get Version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
+      - name: Install dependencies & Build
         run: |
           npm ci
           npm run build
-          sudo apt install zip
+          sudo apt update && sudo apt install -y zip
           zip -rm letterboxd-enhancer.zip dist
 
-      - name: Upload binaries to release
+      - name: Upload release artifact
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
