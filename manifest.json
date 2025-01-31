@@ -12,7 +12,7 @@
         "https://letterboxd.com/*"
     ],
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "src/background.js"
     },
     "content_scripts": [
         {
@@ -20,17 +20,18 @@
                 "https://letterboxd.com/*"
             ],
             "js": [
-                "content.js"
+                "src/movie-favorite-finder.js",
+                "src/watchlist-movie-picker.js"
             ],
             "css": [
-                "styles.css"
+                "src/assets/styles/style.css"
             ]
         }
     ],
     "web_accessible_resources": [
         {
             "resources": [
-                "icons/*"
+                "src/assets/icons/*"
             ],
             "matches": [
                 "https://letterboxd.com/*"

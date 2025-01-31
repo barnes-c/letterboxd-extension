@@ -1,3 +1,3 @@
 chrome.runtime.onInstalled.addListener(() => {
-  console.log('Letterboxd Enhancer installed.');
+  console.log('Letterboxd Extension is running.');
 });
