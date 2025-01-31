@@ -22,9 +22,6 @@
             "js": [
                 "src/movie-favorite-finder.js",
                 "src/watchlist-movie-picker.js"
-            ],
-            "css": [
-                "src/assets/styles/style.css"
             ]
         }
     ],
