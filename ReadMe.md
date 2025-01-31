@@ -1,5 +1,7 @@
 # Letterboxd Companion
 
+![Letterboxd Companion Logo](src/assets/Banner.png)
+
 ## Overview
 
 Letterboxd Companion is a Chrome extension designed to enhance your Letterboxd experience. It helps you pick a random movie from your watchlist when you can't decide what to watch and allows you to find other users who share your top 4 favorite films.
