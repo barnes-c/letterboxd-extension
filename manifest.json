@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "Letterboxd Enhancer",
+    "version": "1.0",
+    "description": "Enhance your Letterboxd experience with additional features and customization.",
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://letterboxd.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://letterboxd.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "icons/*"
+            ],
+            "matches": [
+                "https://letterboxd.com/*"
+            ]
+        }
+    ]
+}
