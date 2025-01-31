@@ -16,7 +16,7 @@
     const link = document.createElement('a');
     link.href = searchUrl;
     link.classList.add('all-link');
-    link.innerText = 'Users with same favorites';
+    link.innerText = 'Find Top4 Mutuals';
     link.target = '_blank';
 
     return link;
