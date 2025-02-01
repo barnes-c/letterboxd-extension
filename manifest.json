@@ -1,51 +1,36 @@
 {
-    "manifest_version": 3,
-    "name": "Letterboxd Companion",
-    "version": "1.0",
-    "description": "Enhance your Letterboxd experience with additional features.",
-    "permissions": [
-        "storage",
-        "tabs",
-        "activeTab"
-    ],
-    "host_permissions": [
-        "https://letterboxd.com/*"
-    ],
-    "background": {
-        "service_worker": "src/background.js"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "https://letterboxd.com/*"
-            ],
-            "js": [
-                "src/movie-favorite-finder.js",
-                "src/watchlist-movie-picker.js"
-            ]
-        }
-    ],
-    "web_accessible_resources": [
-        {
-            "resources": [
-                "src/assets/icons/*"
-            ],
-            "matches": [
-                "https://letterboxd.com/*"
-            ]
-        }
-    ],
-    "icons": {
-        "16": "src/assets/icons/icon-16x16.png",
-        "48": "src/assets/icons/icon-48x48.png",
-        "128": "src/assets/icons/icon-128x128.png"
-    },
-    "action": {
-        "default_icon": {
-            "16": "src/assets/icons/icon-16x16.png",
-            "48": "src/assets/icons/icon-48x48.png",
-            "128": "src/assets/icons/icon-128x128.png"
-        },
-        "default_title": "Letterboxd Companion"
+  "manifest_version": 3,
+  "name": "Letterboxd Companion",
+  "version": "1.0",
+  "description": "Enhance your Letterboxd experience with additional features.",
+  "permissions": ["storage", "tabs", "activeTab"],
+  "host_permissions": ["https://letterboxd.com/*"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://letterboxd.com/*"],
+      "js": ["src/movie-favorite-finder.js", "src/watchlist-movie-picker.js"]
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/assets/icons/*"],
+      "matches": ["https://letterboxd.com/*"]
+    }
+  ],
+  "icons": {
+    "16": "src/assets/icons/icon-16.png",
+    "48": "src/assets/icons/icon-48.png",
+    "128": "src/assets/icons/icon-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "src/assets/icons/icon-16.png",
+      "48": "src/assets/icons/icon-48.png",
+      "128": "src/assets/icons/icon-128.png"
+    },
+    "default_title": "Letterboxd Companion"
+  }
 }
