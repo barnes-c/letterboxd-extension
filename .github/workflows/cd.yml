@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update && sudo apt install -y zip
-          cp manifest src/
+          cp manifest.json src/
           zip -rm letterboxd-companion.zip src
 
       - name: Upload release artifact
