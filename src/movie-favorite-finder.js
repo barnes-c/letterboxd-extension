@@ -23,7 +23,7 @@
     return link;
   }
 
-  function injectAllLink() {
+  function injectFindMutualsButton() {
     const sectionHeading = document.querySelector(
       '#favourites .section-heading',
     );
@@ -41,7 +41,7 @@
     );
     if (sectionHeading) {
       observer.disconnect();
-      injectAllLink();
+      injectFindMutualsButton();
     }
   });
 

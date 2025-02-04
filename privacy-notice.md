@@ -18,4 +18,4 @@ If any changes are made to this privacy policy, they will be reflected here.
 
 ## 5. Contact
 
-If you have any questions about this privacy policy, you can reach out via [your contact email].
+If you have any questions about this privacy policy, you can reach out via christopher@barnes.biz.
